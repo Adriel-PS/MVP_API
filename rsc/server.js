@@ -13,6 +13,7 @@ app.use(express.json());
 
 // Importar Rotas
 const userRoutes = require('./routs/userRoutes');
+const taskRoutes = require('./routs/taskRoutes');
 
 // Rota de Teste
 app.get('/', (req, res) => {
@@ -21,6 +22,7 @@ app.get('/', (req, res) => {
 
 // Registrar Rotas
 app.use('/users', userRoutes);
+app.use('/tasks', taskRoutes);
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
